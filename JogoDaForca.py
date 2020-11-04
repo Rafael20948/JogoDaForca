@@ -52,6 +52,7 @@ while numTentativas >= 0:
                   listaAllLetras.append(letra)
                   listaAcertos.append(letra)
                   intersecao(listPalavraAleatoria,listaAcertos)
+                  numTentativas+=1
         else:
             listaErros.append(letra)
             listaAllLetras.append(letra)
@@ -62,7 +63,6 @@ while numTentativas >= 0:
                   print("*********")
                   print('GAME OVER')
                   print("*********")
-                  print(f'A palavra era: {palavraAleatoria}')
     if tamanhoListaAcertos == (listaCaracterUnico - 1):
         print("*********************")
         print(f'Parabéns você ganhou')
@@ -75,4 +75,6 @@ while numTentativas >= 0:
     if letra == '' or letra == ' ' or letra == '/n':
             numTentativas+=1
     print(f'Tentativas Restantes {numTentativas + 1} \n')
+print(f'A palavra era: {palavraAleatoria}')
+
         
